@@ -110,6 +110,7 @@
   .container { padding-inline: 15px; }
   
   .btn {
+    box-shadow: 0 0 50px 20px var(--pumpkin-s);
     color: var(--color, var(--white));
     font-size: var(--fs-4);
     max-width: var(--width, max-content);
@@ -119,10 +120,10 @@
   }
   
   .btn-primary,
-  .btn-secondary:is(:hover, :focus) { background-color: var(--pumpkin); }
+  .btn-secondary:is(:hover, :focus) { background-color: var(--pumpkin); transition: 0.5s;}
   
   .btn-primary:is(:hover, :focus),
-  .btn-secondary { background-color: var(--pumpkin); }
+  .btn-secondary { background-color: var(--dark-purple); transition: 0.5s;}
   
   .btn-outline {
     --color: var(--pumpkin);
@@ -280,6 +281,7 @@
     background-color: var(--eerie-black);
     color: var(--white);
     padding-block-start: calc(var(--section-padding) + 70px);
+    border-bottom: 0.5px solid var(--pumpkin-s);
   }
   
   .hero-content { margin-block-end: 20px; }
@@ -362,7 +364,8 @@
   
   .about-item .item-title { margin-block-end: 10px; }
   
-  
+  .about-2 { border-bottom: 0.5px solid var(--pumpkin-s);}
+
   .about-2 .section-text:last-of-type { margin-block: 30px; }
 
   .about-2 .section-title {
@@ -383,7 +386,7 @@
   
   .app-banner { margin-block-end: 30px; }
   
-  .app .section-title { color: var(--white); }
+  .app .section-title { color: var(--eerie-black); }
   
   .app .section-text { margin-block-end: 30px; }
   
@@ -754,8 +757,8 @@
       gap: 60px;
     }
   
-    .about-banner,
-    .app-banner { margin-block-end: 0; }
+    /* .about-banner,
+    .app-banner { margin-block-end: 0; } */
   
   
   
@@ -770,7 +773,7 @@
   
     .app-content { padding-block: var(--section-padding); }
   
-    .app-banner { transform: translateY(100px); }
+    /* .app-banner { transform: translateY(100px); } */
   
   
   
@@ -995,6 +998,8 @@ h2 {
 }
 
 .card__container {
+  border-radius: 1.75rem;
+  box-shadow: 0 0 50px 20px var(--pumpkin-s);
   width: 400px;
 }
 
@@ -1003,13 +1008,14 @@ h2 {
   background-color: var(--white-color);
   padding: 2rem 1.5rem 2.5rem;
   border-radius: 1.75rem;
-  box-shadow: 0 12px 25px var(--pumpkin-s);
+  box-shadow: 0 0 25px 10px var(--pumpkin-s);
   transition: .4s;
   text-align: center;
 }
 
 .card__content:hover {
-  box-shadow: 0 16px 24px hsla(var(--hue-color), 61%, 16%, 0.15);
+  scale: 1.03;
+  box-shadow: 0 0 50px 20px var(--pumpkin-s);
 }
 
 .card__header-img {
@@ -1038,6 +1044,8 @@ h2 {
   font-size: var(--biggest-font-size);
   color: var(--title-color);
   margin-bottom: var(--mb-1);
+  border-bottom: 1px solid #5e367c;
+  border-radius: 15px;
 }
 
 .card__pricing {
