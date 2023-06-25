@@ -13,6 +13,7 @@
     --black_10: hsla(0, 0%, 0%, 0.1);
     --black_5: hsla(0, 0%, 0%, 0.05);
     --pumpkin: #b379f7;
+    --pumpkin-s: #b479f723;
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
   
@@ -35,7 +36,7 @@
     --section-padding: 50px;
   
 
-    --shadow-1: 0px 0px 20px var(--black_10);
+    --shadow-1: 0px 0px 20px var(--pumpkin-s);
     --shadow-2: 0 0 20px 4px var(--black_5);
   
 
@@ -91,7 +92,7 @@
   }
   
   body {
-    background-color: var(--white);
+    background-color: var(--eerie-black);
     font-size: 1.6rem;
     color: var(--davys-gray);
   }
@@ -121,7 +122,7 @@
   .btn-secondary:is(:hover, :focus) { background-color: var(--pumpkin); }
   
   .btn-primary:is(:hover, :focus),
-  .btn-secondary { background-color: var(--dark-purple); }
+  .btn-secondary { background-color: var(--pumpkin); }
   
   .btn-outline {
     --color: var(--pumpkin);
@@ -201,7 +202,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--white);
+    background-color: var(--eerie-black);
     padding-block: 15px;
     z-index: 4;
   }
@@ -264,7 +265,7 @@
   }
   
   .navbar-link {
-    color: var(--eerie-black);
+    color: var(--white-color);
     font-size: var(--fs-3);
     font-weight: var(--fw-600);
     padding-block: 7px;
@@ -276,7 +277,7 @@
   .navbar .btn { margin-block: 8px; }
   
   .hero {
-    background-color: var(--dark-purple);
+    background-color: var(--eerie-black);
     color: var(--white);
     padding-block-start: calc(var(--section-padding) + 70px);
   }
@@ -288,7 +289,9 @@
   .hero .section-text { margin-block-end: 30px; }
   
   
-  .features .section-title { margin-block-end: 30px; }
+  .features .section-title { 
+    color: var(--white-color);
+    margin-block-end: 30px; }
   
   .features-list {
     display: grid;
@@ -361,12 +364,20 @@
   
   
   .about-2 .section-text:last-of-type { margin-block: 30px; }
+
+  .about-2 .section-title {
+    color: var(--white-color);
+  }
+
+  .about-2 .section-text {
+    color: var(--white-color);
+  }
   
   .about-2 .about-content { margin-block-end: 30px; }
   
   
   .app {
-    background-color: var(--dark-purple);
+    background-color: var(--white-color);
     color: var(--white);
   }
   
@@ -377,7 +388,9 @@
   .app .section-text { margin-block-end: 30px; }
   
   
-  .blog .section-title { margin-block-end: 30px; }
+  .blog .section-title { 
+    color: var(--white-color);
+    margin-block-end: 30px; }
   
   .blog-list {
     display: flex;
@@ -391,7 +404,7 @@
   .blog-card {
     padding: 15px;
     border-radius: var(--radius-10);
-    box-shadow: var(--shadow-2);
+    box-shadow: var(--shadow-1);
   }
   
   .blog-card .card-banner {
@@ -427,7 +440,7 @@
   
   .blog-card .h3 { margin-block-end: 15px; }
   
-  .blog-card .card-title { transition: var(--transition-1); }
+  .blog-card .card-title { color: var(--white-color); transition: var(--transition-1); }
   
   .blog-card .card-title:is(:hover, :focus) { color: var(--pumpkin); }
   
@@ -969,10 +982,15 @@
   justify-content: center;
 }
 
+p {
+  color: var(--pumpkin);
+  font-size: var(--fs-3);
+}
+
 h2 {
   font-size: 40px;
   font-family: var(--ff-roboto);
-  color: #18181b;
+  color: var(--white-color);
   margin-bottom: 20px;
 }
 
@@ -982,11 +1000,12 @@ h2 {
 
 .card__content {
   position: relative;
-  background-color: var(--dark-purple);
+  background-color: var(--white-color);
   padding: 2rem 1.5rem 2.5rem;
   border-radius: 1.75rem;
-  box-shadow: 0 12px 24px hsla(var(--hue-color), 61%, 16%, 0.1);
+  box-shadow: 0 12px 25px var(--pumpkin-s);
   transition: .4s;
+  text-align: center;
 }
 
 .card__content:hover {
@@ -1030,6 +1049,7 @@ h2 {
   top: -1rem;
   padding-top: 1.25rem;
   text-align: center;
+  border-radius: 5px;
 }
 
 .card__pricing-number {
@@ -1075,6 +1095,9 @@ h2 {
 .card__list {
   row-gap: .5rem;
   margin-bottom: var(--mb-2);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card__list-item {
@@ -1090,17 +1113,17 @@ h2 {
 /* preço mudar */
 .card__header h1.card__header-title {
   font-size: 3rem;
-  color: white;
+  color: var(--eerie-black);
 }
 
 .card__header span.card__header-subtitle {
   font-size: 1rem;
-  color: rgb(241, 241, 241);
+  color: var(--eerie-black);
 }
 
 .card__list-item p.card__list-description {
   font-size: 1.5rem;
-  color: rgb(241, 241, 241);
+  color: var(--eerie-black);
 }
 
 .card__button {
@@ -1112,6 +1135,8 @@ h2 {
   color: var(--white-color);
   cursor: pointer;
   transition: .4s;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 .card__button:hover {
