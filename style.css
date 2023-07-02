@@ -100,6 +100,7 @@
   }
   
   body {
+    overflow-x: hidden;
     background-color: var(--eerie-black);
     font-size: 1.6rem;
     color: var(--davys-gray);
@@ -246,6 +247,7 @@
     color: var(--white);
     font-size: 35px;
     padding: 2px 8px;
+    border-radius: 3px;
   }
   
   .navbar {
@@ -274,14 +276,14 @@
   }
   
   .navbar-link {
-    color: var(--white-color);
+    color: var(--pumpkin);
     font-size: var(--fs-3);
     font-weight: var(--fw-600);
     padding-block: 7px;
     transition: var(--transition-1);
   }
   
-  .navbar-link:is(:hover, :focus, .active) { color: var(--pumpkin); }
+  .navbar-link:is(:hover, :focus, .active) { color: var(--dark-purple); }
   
   .navbar .btn { margin-block: 8px; }
   
