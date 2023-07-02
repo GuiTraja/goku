@@ -103,6 +103,7 @@
     background-color: var(--eerie-black);
     font-size: 1.6rem;
     color: var(--davys-gray);
+    overflow-x: hidden;
   }
   
   :focus-visible { outline-offset: 4px; }
