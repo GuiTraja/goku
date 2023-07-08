@@ -130,10 +130,10 @@
   }
   
   .btn-primary,
-  .btn-secondary:is(:hover, :focus) { background-color: var(--pumpkin); transition: 0.5s;}
+  .btn-secondary:is(:hover, :focus) { background-color: greenyellow; transition: 0.5s; color: black;}
   
   .btn-primary:is(:hover, :focus),
-  .btn-secondary { background-color: var(--dark-purple); transition: 0.5s;}
+  .btn-secondary { background-color: greenyellow; transition: 0.5s; color: black;}
   
   .btn-outline {
     --color: var(--pumpkin);
@@ -1150,8 +1150,8 @@ h2 {
   border: none;
   font-size: 1.5rem;
   border-radius: .5rem;
-  background: var(--pumpkin);
-  color: var(--white-color);
+  background: greenyellow;
+  color: black;
   cursor: pointer;
   transition: .4s;
   margin-left: 50%;
