@@ -59,6 +59,22 @@
 
 <body id="top">
 
+  <div class="pop-up" id="pop-up">
+    <div class="modal">
+      <button class="fechar" id="fechar" onclick="fecharModal()">X</button>
+      <section class="form-section">
+        <h2> <strong>Parábens!</strong> Você ganhou 2 Ebooks <strong>Gratuitos!</strong></h2>
+        <h3>Nos informe o seu WhatsApp para que a gente possa entrar em contato e enviar os seus 2 ebooks Gratuitos!</h3>
+      
+        <form id="form-api" class="form-contact">
+          <input id="nome" type="text" name="nome" placeholder="Seu nome" required>
+          <input id="assunto" type="text" name="assunto" placeholder="Digite o seu WhatsApp com DDD" required>
+          <button id="button" type="submit">Enviar</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
   <!-- 
     - #HEADER
   -->
@@ -107,6 +123,7 @@
 
 
   <main>
+
     <article>
       
       <!-- 
@@ -667,6 +684,11 @@
 
 
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init('QrvB6qL6I5eFeGh60')
+  </script>
+  <script src="email.js"></script>
 
   <script src="code.js" defer></script>
 

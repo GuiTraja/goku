@@ -47,3 +47,11 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+document.body.style.overflow = 'hidden'
+
+function fecharModal() {
+  const popUp = document.getElementById('pop-up')
+  popUp.classList.add('closepopup')
+  document.body.style.overflowY = 'visible'
+}

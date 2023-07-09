@@ -106,6 +106,124 @@
     color: var(--davys-gray);
     overflow-x: hidden;
   }
+
+  .pop-up {
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(109, 109, 109, 0.151);
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pop-up.closepopup {
+    display: none;
+  }
+
+  .modal {
+    width: 50%;
+    height: 50%;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fechar {
+    top: -15px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(255, 173, 173);
+  }
+  
+  .form-section {
+    margin-bottom: 30px;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-section h2 {
+    text-align: center;
+    margin-bottom: 0;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .form-section h2 strong {
+    color: rgb(186, 252, 87);
+  }
+
+  .form-section h3 {
+    text-align: center;
+    font-size: 12pt;
+    color: #ffffff9a;
+    margin-bottom: 40px;
+  }
+
+  .form-contact {
+    font-size: 15pt;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-contact input {
+    margin-bottom: 10px;
+  }
+
+  .form-contact input, textarea {
+    color: #fff;
+    text-align: center;
+    font-size: 15pt;
+    padding-inline: 10px;
+    padding-block: 10px;
+    width: 70%;
+    border: 1px solid rgb(186, 252, 87);
+    background-color: #1c1c1c;
+    border-radius: 15px;
+  }
+
+   .form-contact input:focus, textarea:focus, button:focus {
+    border: #5e367c;
+   }
+
+  .form-contact button {
+    width: 30%;
+    height: 50%;
+    color: #c2c2c293;
+    border: 1px solid rgb(186, 252, 87);
+    background-color: #1c1c1c;
+    border-radius: 15px;
+  }
+
+  .form-contact button:hover {
+    color: rgb(186, 252, 87);
+    scale: 1.1;
+    transition: all 400ms;
+  }
+
+  .form-contact input::placeholder, .form-contact textarea::placeholder {
+    display: none !important;
+  }
+
   
   :focus-visible { outline-offset: 4px; }
   
@@ -1236,8 +1354,28 @@ h2 {
 }
 
 /* for mobile change prince */
+@media screen and (max-width: 1024px) {
+  .modal {
+      width: 80%;
+      height: 80%;
+    }
+}
+
 
 @media screen and (max-width: 500px) {
+
+  .modal {
+    width: 80%;
+    height: 80%;
+  }
+
+  .form-contact {
+    width: 150%;
+  }
+
+  .form-contact input {
+    font-size: 11pt;
+  }
 
   .btn {
     margin-left: 10vw !important;
@@ -1263,4 +1401,3 @@ h2 {
     width: 95vw;
   }
 }
-
