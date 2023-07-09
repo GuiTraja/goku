@@ -130,10 +130,10 @@
   }
   
   .btn-primary,
-  .btn-secondary:is(:hover, :focus) { background-color: greenyellow; transition: 0.5s; color: black;}
+  .btn-secondary:is(:hover, :focus) { background-color: rgb(186, 252, 87); transition: 0.5s; color: black;}
   
   .btn-primary:is(:hover, :focus),
-  .btn-secondary { background-color: greenyellow; transition: 0.5s; color: black;}
+  .btn-secondary { background-color: rgb(186, 252, 87); transition: 0.5s; color: black;}
   
   .btn-outline {
     --color: var(--pumpkin);
@@ -558,6 +558,21 @@
     transform: translateX(-51px);
   }
   
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .pulse-button {
+    animation: pulse 2s infinite;
+  }
   
   
   
@@ -1150,7 +1165,7 @@ h2 {
   border: none;
   font-size: 1.5rem;
   border-radius: .5rem;
-  background: greenyellow;
+  background: rgb(186, 252, 87);
   color: black;
   cursor: pointer;
   transition: .4s;
@@ -1215,3 +1230,4 @@ h2 {
     width: 95vw;
   }
 }
+
