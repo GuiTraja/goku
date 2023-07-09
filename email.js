@@ -15,6 +15,7 @@ document.getElementById('form-api')
       const popUp = document.getElementById('pop-up')
       popUp.classList.add('closepopup')
       document.body.style.overflowY = 'visible'
+      alert('Sucesso ao enviar o e-mail!');
     }, (err) => {
       btn.value = 'Send Email';
       alert('Erro ao enviar e-mail!');

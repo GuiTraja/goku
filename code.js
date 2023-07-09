@@ -48,7 +48,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-document.body.style.overflow = 'hidden'
+document.body.style.overflowY = 'hidden'
 
 function fecharModal() {
   const popUp = document.getElementById('pop-up')
