@@ -151,7 +151,6 @@
   .section { padding-block: var(--section-padding); }
   
   .section-subtitle {
-    max-width: 70%;
     color: var(--pumpkin);
     font-size: var(--fs-3);
     margin-block-end: 5px;
@@ -171,11 +170,22 @@
   
   .section-text,
   .card-text {
-    max-width: 70%;
     font-size: var(--fs-4);
     line-height: 1.8;
   }
+
+  .section-subtitle.limit-text {
+    max-width: 70%;
+  }
+
+  .hero-title.limit-text {
+    max-width: 90%;
+  }
   
+  .section-text.limit-text {
+    max-width: 70%;
+  }
+
   .btn-list {
     display: flex;
     flex-wrap: wrap;
@@ -300,7 +310,6 @@
   .hero-content { margin-block-end: 20px; }
   
   .hero-title { 
-    max-width: 90%;
     margin-block: 15px 20px; }
   
   .hero .section-text { margin-block-end: 30px; }
