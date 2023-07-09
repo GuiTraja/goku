@@ -1238,6 +1238,26 @@ h2 {
 /* for mobile change prince */
 
 @media screen and (max-width: 500px) {
+
+  .btn {
+    margin-left: 10vw !important;
+  }
+  
+  .section-subtitle.limit-text {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .hero-title.limit-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .section-text.limit-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
   .card__content{
     margin: 0 auto;
     width: 95vw;
