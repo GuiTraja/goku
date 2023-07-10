@@ -48,10 +48,10 @@ window.addEventListener("scroll", function () {
   }
 });
 
-document.body.style.overflowY = 'hidden'
+// document.body.style.overflowY = 'hidden'
 
-function fecharModal() {
-  const popUp = document.getElementById('pop-up')
-  popUp.classList.add('closepopup')
-  document.body.style.overflowY = 'visible'
-}
+// function fecharModal() {
+//   const popUp = document.getElementById('pop-up')
+//   popUp.classList.add('closepopup')
+//   document.body.style.overflowY = 'visible'
+// }
